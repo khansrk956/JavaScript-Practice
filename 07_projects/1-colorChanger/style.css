@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.button {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid #000; /* Add border for better visibility */
+}
+
+#grey {
+    background-color: grey;
+}
+
+#white {
+    background-color: white;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+}
