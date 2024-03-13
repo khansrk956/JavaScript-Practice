@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>onclick event in javascript</title>
+	<script type="text/javascript">
+		function call(){
+			alert("Hello welcome to on click event.");
+			console.log("working");
+		}
+		function hello(){
+			alert("Hello working...")
+		}
+		function msg(){
+			alert("Inside right click event");
+		}
+		function test(){
+			alert("mouse Down");
+		}
+		function out(){
+			alert("Mouse up");
+		}
+		function key(){
+			alert("Key press event");
+		}
+	</script>
+</head>
+<body onkeypress="key()">
+<button onclick="call()">Click me</button>
+<h3 ondblclick="hello()">Click Here</h3>
+<p oncontextmenu="msg()">Right click</p>
+<p onmousedown="test()">Mouse Down</p>
+<p onmouseup="out()">Mouse up</p>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Create Element</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <script>
+        const div = document.createElement('div')
+        console.log(div);
+        div.className = 'main'  //overwite previous value
+        div.id = Math.round(Math.random() * 10 + 1)   // overwrite previous value
+        // custom attribute
+        div.setAttribute('title', 'srk')  // but this  direct set the value not overwrite the previous value.
+        div.style.backgroundColor = 'green'
+        div.style.padding = '15px'
+        //  div create on memory till now but no comes in browser page.
+        // div.innerText = "Sharukh khan"  // overwrite previous value.
+        const addText = document.createTextNode("I am working on DOM");
+        div.appendChild(addText);
+        // attachment on document to visible in the browser.
+        document.body.appendChild(div)
+
+    </script>
+    
+</body>
+</html>
