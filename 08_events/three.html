@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Remove</title>
+    <style>
+      #images {
+        display: grid;
+        grid-template-columns: repeat(
+          3,
+          1fr
+        ); /* Adjust column size as needed */
+        gap: 15px; /* Adjust gap between items */
+        list-style: none; /* Remove default list styling */
+        padding: 0; /* Remove default padding */
+      }
+
+      #images li {
+        width: 100%; /* Make sure each grid item takes the full width of its container */
+      }
+
+      #images li img {
+        width: 200px; /* Ensure images take the full width of their parent container */
+        height: 200px; /* Maintain aspect ratio */
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #414141; color: aquamarine">
+    <h2>Amazing Image</h2>
+    <ul id="images">
+      <li>
+        <img
+          width="200px"
+          id="photoshop"
+          src="https://images.pexels.com/photos/3314294/pexels-photo-3314294.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="photoshop"
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="beet"
+          src="https://images.pexels.com/photos/955793/pexels-photo-955793.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="beet"
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="laptop"
+          src="https://images.pexels.com/photos/7484736/pexels-photo-7484736.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="laptop"
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="nature"
+          src="https://images.pexels.com/photos/1820563/pexels-photo-1820563.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="nature"
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="mountain"
+          src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="mountain"
+        />
+      </li>
+      <li>
+        <a href="https://google.com" id="google" style="color: blue">Google</a>
+      </li>
+    </ul>
+
+    <script>
+      document.querySelector("#images").addEventListener(
+        "click",
+        function (e) {
+          console.log(e.target.tagName);
+          if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove(); // first approach
+
+
+          }
+          //   removeIt.parentNode.removeChild(removeIt)
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
