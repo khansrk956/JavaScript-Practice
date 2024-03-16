@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1>Sharukh khan</h1>
+    <button id="stop">Stop</button>
+    <script>
+        // this is a method // also used to call API. => setTimeOut();
+        // clearTimeout(), clearInterval(), setInterval()
+        const sayHi = function(){
+            console.log("Sharukh Saifi")
+        }
+        const changeText = function(){
+            const newH1 = document.querySelector("h1")
+            newH1.innerHTML = "This is new JavaScript method."
+        }
+        
+        const setTimeFunc =  setTimeout(changeText,2000)
+        // clearTimeOut() -> it take reference from setTimeOut you want to clear.
+        
+        const btn = document.querySelector("#stop")
+        btn.addEventListener('click', function(){
+            clearTimeout(setTimeFunc)
+            console.log("Stopped")
+        })
+    </script>
+</body>
+</html>

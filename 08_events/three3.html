@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1>Sharukh khan</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        const sayDate = function(str){
+            console.log(str, Date.now());
+        }
+        let intervalId; // Declare intervalId outside event listeners
+        const btnStart = document.querySelector("#start")
+        btnStart.addEventListener('click', function(){
+            intervalId =setInterval(sayDate, 1000 , 'Hello')
+        })
+
+        const btnStop = document.querySelector("#stop")
+        btnStop.addEventListener('click', function(){
+            clearInterval(intervalId)
+        })  
+    </script>
+</body>
+</html>

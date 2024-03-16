@@ -18,7 +18,7 @@ if(playGame){
     submitButton.addEventListener('click', function(e){
         e.preventDefault()  // hold the values untill I want.
         const guess = parseInt(userInput.value)
-        console.log(guess)
+        // console.log(guess)
         validateGuess(guess)  // number from user input
     })
 }
@@ -61,7 +61,7 @@ function displayGuess(guess){
     userInput.value = ''
     guessSlot.innerHTML += `${guess} `
     numGuess++;
-    remainingResult.innerHTML = `${10 - numGuess}`
+    remainingResult.innerHTML = `${11 - numGuess}`
 }
 
 function displayMessage(message){
@@ -90,7 +90,7 @@ function newGame(){
         prevGuess = []
         numGuess = 1
         guessSlot.innerHTML = ''
-        remainingResult.innerHTML = `${10 - numGuess}`
+        remainingResult.innerHTML = `${11 - numGuess}`
         userInput.removeAttribute('disabled')
         startOver.removeChild(p)
 
