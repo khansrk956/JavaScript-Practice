@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #414141;
+      }
+      h1 {
+        color: white;
+      }
+      button {
+        outline: none;
+        border-radius: 40px;
+        font-size: larger;
+        padding: 20px;
+      }
+      button:hover {
+        color: white;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Working</h1>
+    <button id="orange">Click</button>
+    <button id="green">Click</button>
+    <script>
+      function clickHandler(color) {
+        return function () {
+          document.body.style.backgroundColor = `${color}`;
+        };
+      }
+
+      document.getElementById("orange").onclick = clickHandler("orange");
+      document.getElementById("green").onclick = clickHandler("green");
+
+      //   function init() {
+      //     const name = "Mozilla";
+      //     function displayName() {
+      //       let userName = "Sharukh";
+      //       // displayname() is the inner function, a closure.
+      //       console.log(name); // use variable declared in the parent function.
+      //     }
+      //     // console.log(userName);
+      //     displayName();
+      //   }
+      //   init();
+    </script>
+  </body>
+</html>
