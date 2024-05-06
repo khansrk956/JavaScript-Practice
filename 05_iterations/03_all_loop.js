@@ -6,12 +6,12 @@
 const arr = [1, 2, 3, 4, 5];
 
 for (const num of arr) {
-  //   console.log(num);
+  // console.log(num);
 }
 
 const greetings = "Hello World!";
 for (const greet of greetings) {
-  //   console.log(`Each char is ${greet}`);
+  // console.log(`Each char is ${greet}`);
 }
 
 // Maps
@@ -35,5 +35,5 @@ const myObj = {
 };
 
 // for (const [game, value] of myObj) {
-//   console.log(`${game} :- ${value}`);
+// console.log(`${game} :- ${value}`);
 // }
