@@ -4,7 +4,7 @@ const xmlh = new XMLHttpRequest();
 xmlh.open("GET", requestUrl);
 let data;
 xmlh.onreadystatechange = function () {
-//   console.log(xmlh.readyState);
+  //   console.log(xmlh.readyState);
 
   if (xmlh.readyState === 4 && xmlh.status === 200) {
     // console.log(this.responseText)
@@ -20,7 +20,7 @@ xmlh.onreadystatechange = function () {
 xmlh.send();
 
 function updateUserInfo(deta) {
-//console.log(deta);
+  //console.log(deta);
   const userImage = document.querySelector(".user-image");
   const userName = document.querySelector(".user-name");
   const userFollowing = document.querySelector(".userFollowing");

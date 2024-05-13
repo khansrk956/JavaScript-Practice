@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Request</title>
+  </head>
+  <body style="background-color: #212121">
+    <!-- Learn how to get the api before fetch method. 
+    XML - State
+    0	UNSENT	Client has been created.  open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+    -->
+    <!-- JSON.parse() use to convert string to object. -->
+    <script>
+      const requestUrl = "https://api.github.com/users/khansrk956";
+      const xhr = new XMLHttpRequest();
+      console.log(xhr);
+      xhr.open("GET", requestUrl);
+      //   console.log(xhr.readyState);
+      //   current context me we use this
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+          const data = JSON.parse(this.responseText);
+          console.log(typeof data);
+          console.log(data.name);
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>
+
+<!-- console.log()  -> IT is a developer tool. -->
+<!-- v8-engine -> Acutally created javascript from c++ (it is a wrapper JavaScript) -->

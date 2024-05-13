@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>After Method</title>
+  </head>
+  <body>
+    <h1>
+      We can use after() method to insert one or more nodes after the element.
+    </h1>
+    <ul id="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Blog</li>
+    </ul>
+    <button onclick="myFunction()">Replace</button>
+    <script>
+      function myFunction() {
+        // select first child element.
+        const ele = document.getElementById("menu").children[0];
+        console.log(ele);
+        // create a new text node:
+        const newNode = document.createTextNode("Contact");
+        console.log(newNode);
+        // Replace the text node:
+        ele.replaceChild(newNode, ele.childNodes[0]);
+      }
+      let menu = document.getElementById("menu");
+      // Element.after(node) - syntax
+      //   menu.after(node1, node2, ...nodeN);
+      //   menu.after(str1, str2)
+
+      // parentNode.append(newNodes);
+      // parentNode.prepend(newNodes);
+
+      // element.insertAdjacentHTML(positionName, text)
+      //   menu.insertAdjacentHTML("afterbegin", "<li>Contact</li>");
+
+      //   parentNode.replaceChild(newChild, oldChild);
+
+      //   let newNode = menu.cloneNode(true);
+      //   console.log(newNode);
+
+      // removeChild()
+      // parentNode.removeChild(childNode);
+      //   menu.removeChild(menu.lastElementChild);
+      //   menu.removeChild(menu.firstElementChild);
+
+      // parentNode.insertBefore(newNode, existingNode);
+      //   menu.insertBefore(newNode, menu.firstElementChild);
+    </script>
+  </body>
+</html>

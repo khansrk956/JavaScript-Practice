@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulating HTML elements</title>
+  </head>
+  <body>
+    <h1>Manipulating HTML Elements</h1>
+    <ul>
+      <li>createElement</li>
+      <li>innerHTML</li>
+      <li>appendChild</li>
+    </ul>
+    <script>
+      const div = document.createElement("div");
+      div.innerHTML =
+        "<p>Welcome to the page createElement and appendChild</p>";
+
+      document.body.appendChild(div);
+      div.id = "title";
+      div.className = "container";
+      console.log(div);
+    </script>
+  </body>
+</html>
